@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+   
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/" />
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+    <!-- include footer /-->
+    <script> 
+    $(function(){
+      $("#footer").load("../footer.html"); 
+    });
+	$(function(){
+      $("#nav").load("../nav.html"); 
+    });
+    </script> 
+    
+    
+    <title>Dashbord</title> 
+    
+    
+    <style type="text/css">
+        html,body{
+            background-color: #333333;
+        }
+        #main_header h5{
+            color: #ffffff;
+        }
+        #navmenu{
+            float: right;
+            top: -30px;
+        }
+        #redBtns{
+            margin-top: 5px;
+        }
+        #redBtns button{
+            background-color: #dd4f43;
+            border: 0px;
+            border-radius: 3px;
+            color: #ffffff;
+            margin: 3px auto;
+            width: 80px;
+            padding: 5px;
+            transition: .2s;
+        }
+        #redBtns button:hover{
+            background-color: #e77e76;
+            transition: .2s;
+        }
+        #tbl{
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+            margin-top: 20px;
+        }
+        .tbl_head,.tbl_head2{
+            height: 30px;
+            width: 100%;
+            background-color: #664a82;
+            margin: 0px;
+            padding: 0px;
+            border: 1px solid #dddddd;
+        }
+        .tbl_head{
+            border-radius: 20px 20px 0px 0px; 
+            border-bottom: 0px;
+            padding: 8px;
+            font-size: 16px;
+            font-family: hedfont;
+        }
+        .tbl_head2{
+            border-bottom: 0px;
+        }
+        .menus{
+            border: 1px solid #dddddd;
+            border-top: 0px;
+            padding: 5px;
+        }
+        #txtarea{
+            background-color: #111111;
+            min-height: 180px;
+			height:300px;
+            padding-left: 10px;
+            width: 65%;
+            margin-top: 10px;
+            border-radius: 5px;
+            color: #dddddd;
+            float: right;
+			margin-right:5px;
+        }
+/*================table menu pos============*/
+        .tablemenuposheaderimg{
+			width:100%;
+			height:200px;
+			margin-top:5px;`
+			border:#FFFFFF solid 0px;
+			border-radius:4px;
+			}
+		.listofitemhead{
+			padding:3px;
+			color:#F7F7F7;
+			font-weight:700;
+			}
+		.cancelbuyredbtn{
+            background-color: #dd4f43;
+            border: 0px;
+            border-radius: 3px;
+            color: #ffffff;
+            margin: 3px auto;
+            width: 100px;
+            padding: 5px;
+            transition: .2s;
+        }
+        .cancelbuyredbtn:hover{
+            background-color: #e77e76;
+            transition: .2s;
+        }
+		.floatRight{
+			float:right;
+			}
+        
+/*============ Footer ==============*/        
+        #footer{
+            height: 60px;
+            margin: 0px;
+            padding: 0px;
+            background-color: #111111;
+            bottom: 0px;
+            position: fixed;
+            color: #ffffff;
+        }
+        #footer .links{
+            text-align: center;
+            padding-top: 7px;
+            font-size: 11px;
+        }
+        #footer .links img{
+            max-width: 25px;
+            max-height: 25px;
+        }
+        #footer .active{
+            background-color: #664a82;
+            padding-top: 7px;
+            margin: 0px;
+            height: 100%;
+        }
+        
+    </style>    
+    
+    
+</head>
+
+<body id="body">
+
+    <div id="nav" class="col-md-12 col-sm-12 col-xs-12"></div>
+    
+    <div id="app">
+        <div id="main_header" class="col-md-12 col-sm-12 col-xs-12">
+            <a href="#" class="subbck"><h5><img src="../img/icn/leftarrow.png" style="float:left;margin-top:-3px;width:15px;">Back</h5></a>
+                <div style="margin-top:-30px;text-align:center;">Table Menu POS</div>
+            <span class="glyphicon glyphicon-th-list col-xs-1" id="navmenu"></span>
+        </div>
+        
+        
+        
+       <div class="col-md-12 col-sm-12 col-xs-12">
+          	<img src="../img/tablemenupoeheader.jpg" class="tablemenuposheaderimg">
+        </div>
+        
+        <!-- Red Buttons /-->
+        <div id="redBtns" class="col-md-2 col-sm-2 col-xs-2">
+            <button>Featured</button><br>
+            <button>Specials</button><br>
+            <button>Food</button><br>
+            <button>Drinks</button><br>
+            <button>Cocktails</button><br>
+            <button>Dessert</button><br>
+            <button>Upgrade</button><br>
+            <button>Other</button>
+            
+        </div>
+        
+         <div class="col-md-1 col-sm-1 col-xs-1"></div>
+        
+        <div id="txtarea" class="col-md-9 col-sm-9 col-xs-9">
+                    <p class="listofitemhead">List Of Items</p>
+                    <p>Order Information 1</p>
+                    <p>Order Information 2</p>
+        </div>
+        
+        <!--button cancel and buy now-->
+        
+          <div class="col-md-3 col-sm-3 col-xs-3"></div>
+        
+        <div class="col-md-9 col-sm-9 col-xs-9 floatRight">
+             
+             <div class="row">
+             
+             	<div class="col-md-3 col-sm-3 col-xs-3">
+                	<button class="cancelbuyredbtn">Cancel</button>
+                </div>
+                
+                <div class="col-md-3 col-sm-3 col-xs-3"></div>
+                
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                	<button class="cancelbuyredbtn">Buy Now</button>
+                </div>
+             
+             </div>
+                    
+        </div>
+        
+        
+        
+        <div id="tbl" class="col-md-12 col-sm-12 col-xs-12">
+                <div class="tbl_head">
+                    <div class="col-md-12 col-sm-12 col-xs-12"></div>  
+                </div>
+                <div class="tbl_head2">
+                    
+                </div>
+                
+                
+                
+        </div>
+        
+        
+        
+    </div>  
+    
+    
+    
+    
+<!--  Footer  /-->
+    <div id="footer"></div>
+    
+    
+    
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

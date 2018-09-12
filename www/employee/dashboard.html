@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+   
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/" />
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+    <!-- include footer /-->
+    <script> 
+    $(function(){
+      $("#footer").load("../footer.html"); 
+    });
+	$(function(){
+      $("#nav").load("../nav.html"); 
+    });
+    </script> 
+    
+    
+    <title>Dashbord</title>
+  
+
+    
+    
+    <style type="text/css">
+        html,body{
+            background-color: #333333;
+        }
+        #main_header h5{
+            color: #ffffff;
+        }
+        #navmenu{
+            float: right;
+            margin-top: -32px;
+            z-index: 500;
+        }
+		
+		#employee_tabs_perent{
+			padding-top:20px;
+            font-family: font1;
+		}
+		#employee_tabs{
+			height:90px;
+			margin:2%;
+			width:46%;
+			border-radius:5px;
+			color:#ffffff;
+			font-size:14px;
+			font-family:font1;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: contain;
+            
+		}
+
+
+        
+        
+        
+        
+        
+        
+        
+/*=========== Footer ===========*/    
+        
+        #footer{
+            height: 60px;
+            margin: 0px;
+            padding: 0px;
+            background-color: #111111;
+            bottom: 0px;
+            position: fixed;
+            color: #ffffff;
+        }
+        #footer .links{
+            text-align: center;
+            padding-top: 7px;
+            font-size: 11px;
+        }
+        #footer .links img{
+            max-width: 25px;
+            max-height: 25px;
+        }
+        #footer .active{
+            background-color: #664a82;
+            padding-top: 7px;
+            margin: 0px;
+            height: 100%;
+        }
+        
+    </style>    
+    
+    
+</head>
+
+<body id="body">
+
+    <div id="nav" class="col-md-12 col-sm-12 col-xs-12"></div>
+    
+    <div id="app">
+        <div id="main_header" class="col-md-12 col-sm-12 col-xs-12">
+            <a href="../dashboard.html" class="mainbck"><h5><img src="../img/icn/leftarrow.png" style="float:left;margin-top:-3px;width:15px;">Back</h5></a>
+                <div style="margin-top:-30px;text-align:center;">Employee Login</div>
+            <span class="glyphicon glyphicon-th-list col-xs-1" id="navmenu"></span>
+        </div>
+        
+
+        
+        <!-- Body Items /-->
+        <div class="col-md-12 col-sm-12 col-xs-12" style="padding:0px;">
+            
+            <div id="employee_tabs_perent" class="col-md-12 col-sm-12 col-xs-12">
+            	<br><br>
+            	<div class="col-sm-12 col-xs-12">
+                	<img src="../img/icn/logo_icn.png" class="col-sm-4 col-sm-push-4 col-xs-4 col-xs-push-4">
+
+                </div><br><br><br>
+                
+                <div id="employee_tabs" onclick="window(location='.html')" class="col-xs-6" style="background-image:url(../img/icn/btn_icn1.png);background-color:#664a82;">
+                	TBA
+                </div>
+                
+                <div id="employee_tabs" onclick="window(location='messages.html')" class="col-xs-6" style="background-image:url(../img/icn/btn_icn4.png);background-color:#77824a;">
+                	Messanger
+                </div>
+                
+                <div id="employee_tabs" onclick="window(location='tables.html')" class="col-xs-6" style="background-image:url(../img/icn/btn_icn6.png);background-color:#4a7d82;">
+                	Tables
+                </div>
+                
+                <div id="employee_tabs" onclick="window(location='.html')" class="col-xs-6" style="background-image:url(../img/icn/btn_icn2.png);background-color:#a1815a;">
+                	Passport
+                </div>
+                
+                <div id="employee_tabs" onclick="window(location='.html')" class="col-xs-6" style="background-image:url(../img/icn/btn_icn5.png);background-color:#a15a5a;">
+                	POS
+                </div>
+                
+                <div id="employee_tabs" onclick="window(location='.html')" class="col-xs-6" style="background-image:url(../img/icn/btn_icn3.png);background-color:#4a5582;">
+                	Guest Checkin
+                </div>
+                
+                
+             </div>
+            
+            
+        </div>
+        
+        
+    </div>
+<!--  Footer  /-->
+    <div id="footer"></div>
+    
+    
+    
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

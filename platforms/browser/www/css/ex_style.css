@@ -1,0 +1,79 @@
+html,body{
+            background-color: #333333;
+        }
+        #navmenu{
+            float: right;
+            top: -30px;
+        }
+        #redBtns{
+            margin-top: 5px;
+        }
+        #redBtns button{
+            background-color: #dd4f43;
+            border: 0px;
+            border-radius: 3px;
+            color: #ffffff;
+            margin: 3px auto;
+            width: 120px;
+            padding: 5px;
+        }
+        #tbl{
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+            margin-top: 20px;
+        }
+        .tbl_head,.tbl_head2{
+            height: 30px;
+            width: 100%;
+            background-color: #664a82;
+            margin: 0px;
+            padding: 0px;
+            border: 1px solid #dddddd;
+        }
+        .tbl_head{
+            border-radius: 20px 20px 0px 0px; 
+            border-bottom: 0px;
+            padding: 8px;
+            font-size: 16px;
+            font-family: hedfont;
+        }
+        .tbl_head2{
+            border-bottom: 0px;
+        }
+        .menus{
+            border: 1px solid #dddddd;
+            border-top: 0px;
+            padding: 5px;
+        }
+		
+		
+		
+		
+		
+/*======================== FOOTER ===========================*/		
+		
+        #footer{
+            height: 60px;
+            margin: 0px;
+            padding: 0px;
+            background-color: #111111;
+            bottom: 0px;
+            position: fixed;
+            color: #ffffff;
+        }
+        #footer .links{
+            text-align: center;
+            padding-top: 7px;
+            font-size: 11px;
+        }
+        #footer .links img{
+            max-width: 25px;
+            max-height: 25px;
+        }
+        #footer .active{
+            background-color: #664a82;
+            padding-top: 7px;
+            margin: 0px;
+            height: 100%;
+        }

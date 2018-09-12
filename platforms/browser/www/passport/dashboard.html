@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+   
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/" />
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+    <!-- include footer /-->
+    <script> 
+    $(function(){
+      $("#footer").load("../footer.html"); 
+    });
+	$(function(){
+      $("#nav").load("../nav.html"); 
+    });
+    </script> 
+    
+    
+    <title>Dashbord</title> 
+    
+    
+    <style type="text/css">
+        html,body{
+            /*background-color: #333333;*/
+			overflow-x:hidden;
+        }
+        #main_header h5{
+            color: #ffffff;
+        }
+        #navmenu{
+            float: right;
+            top: -30px;
+        }
+        #redBtns{
+            margin-top: 5px;
+        }
+        #redBtns button{
+            background-color: #dd4f43;
+            border: 0px;
+            border-radius: 3px;
+            color: #ffffff;
+            margin: 3px auto;
+            width: 100%;
+            padding: 15px;
+            transition: .2s;
+        }
+        #redBtns button:hover{
+            background-color: #e77e76;
+            transition: .2s;
+        }
+        #tbl{
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+            margin-top: 20px;
+        }
+        .tbl_head,.tbl_head2{
+            height: 30px;
+            width: 100%;
+            background-color: #664a82;
+            margin: 0px;
+            padding: 0px;
+            border: 1px solid #dddddd;
+        }
+        .tbl_head{
+            border-radius: 20px 20px 0px 0px; 
+            border-bottom: 0px;
+            padding: 8px;
+            font-size: 16px;
+            font-family: hedfont;
+        }
+        .tbl_head2{
+            border-bottom: 0px;
+        }
+        .menus{
+            border: 1px solid #dddddd;
+            border-top: 0px;
+            padding: 5px;
+        }
+        #txtarea{
+            background-color: #111111;
+            min-height: 180px;
+			height:300px;
+            padding-left: 10px;
+            width: 65%;
+            margin-top: 10px;
+            border-radius: 5px;
+            color: #dddddd;
+            float: right;
+			margin-right:5px;
+        }
+/*================table menu pos============*/
+      	.mainrewarddiv{
+			background-color:#000000;
+			padding:5px;
+			border:#000000 solid 1px;
+			border-radius:4px;
+			}
+	    .greyText{
+			color:#5C5C5C;
+			}
+		.cancelbuyredbtn{
+            background-color: #dd4f43;
+            border: 0px;
+            border-radius: 3px;
+            color: #ffffff;
+            margin: 3px auto;
+            width: 100px;
+            padding: 5px;
+            transition: .2s;
+        }
+        .cancelbuyredbtn:hover{
+            background-color: #e77e76;
+            transition: .2s;
+        }
+		.floatRight{
+			float:right;
+			}
+		.search{
+			margin-top:5px;
+			}
+		.favouritehead{
+			color:#5C5C5C;
+			text-align:center;
+			margin:15px;
+			font-size:14px;
+			font-weight:700;
+			}
+		.darkbgmain{
+			background-color:rgba(0,0,0,0.5);
+			padding:10px;
+			margin:0px;
+			border:rgba(0,0,0,0.5) solid 0px;
+			border-radius:4px;
+			}
+		.djimg{
+			width:87%;
+			height:125px;
+			margin:10px;
+			}
+		.darkbgsmall{
+			background-color:rgba(99,99,99,0.5);
+			padding:8px;
+			border:rgba(99,99,99,0.5) solid 0px;
+			border-radius:4px;
+			}
+		.djbtn{
+            background-color: #dd4f43;
+            border: 0px;
+            border-radius: 3px;
+            color: #ffffff;
+            margin: 3px auto;
+            width: 100px;
+            padding: 5px;
+            transition: .2s;
+        }
+        .djbtn:hover{
+            background-color: #e77e76;
+            transition: .2s;
+        }
+		.djrow{
+		margin:10px;
+		clear:both;
+		}
+		.booktable{
+			background-color: #dd4f43;
+            border: 0px;
+            border-radius: 3px;
+            color: #ffffff;
+            width: 300px;
+            padding: 5px;
+            transition: .2s;
+			padding:20px;
+			margin-bottom:5px;
+			margin-top:5px;
+			font-size:16PX;
+			font-weight:700;
+			}
+		.booktable:hover{
+            background-color: #e77e76;
+            transition: .2s;
+       	 }
+		 .bigBtn{
+			margin:0px;
+			padding:0px;
+		 }
+		 .container{
+			margin:0px;
+			padding: 0px;
+		}
+        
+/*============ Footer ==============*/        
+        #footer{
+            height: 60px;
+            margin: 0px;
+            padding: 0px;
+            background-color: #111111;
+            bottom: 0px;
+            position: fixed;
+            color: #ffffff;
+			
+        }
+        #footer .links{
+            text-align: center;
+            padding-top: 7px;
+            font-size: 11px;
+        }
+        #footer .links img{
+            max-width: 25px;
+            max-height: 25px;
+        }
+        #footer .active{
+            background-color: #664a82;
+            padding-top: 7px;
+            margin: 0px;
+            height: 100%;
+        }
+        
+    </style>    
+    
+    
+</head>
+
+<body id="body">
+
+    <div id="nav" class="col-md-12 col-sm-12 col-xs-12"></div>
+    
+    <div id="app">
+        <div id="main_header" class="col-md-12 col-sm-12 col-xs-12">
+            <a href="#" class="mainbck"><h5><img src="../img/icn/leftarrow.png" style="float:left;margin-top:-3px;width:15px;">Back</h5></a>
+                <div style="margin-top:-30px;text-align:center;">Passport</div>
+            <span class="glyphicon glyphicon-th-list col-xs-1" id="navmenu"></span>
+        </div>
+        
+        
+        
+       
+        
+        <!-- Red Buttons /-->
+        <div id="redBtns" class="col-md-12 col-sm-12 col-xs-12">
+           <div class="col-md-4 col-sm-4 col-xs-4"> 
+           	<button>TABS</button>
+          </div>
+           <div class="col-md-4 col-sm-4 col-xs-4"> 
+            	<button>PASSPORT</button>
+           </div>
+            <div class="col-md-4 col-sm-4 col-xs-4"> 
+           	 <button>IBOOKIT LIVE</button>
+            </div>
+            
+        </div>
+        
+        <div class="container">
+        <div class="col-md-12 col-sm-12 col-xs-12 mainrewarddiv">
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            	<p class="greyText" align="right"><a href="#">Find Friends</a></p>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+            	<p class="greyText" align="right"><a href="#">Rewards</a></p>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+            	<p class="greyText" align="right"><a href="#">My Venues</a></p>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+            	<p class="greyText" align="right"><a href="#">My DJ's</a></p>
+            </div>
+            
+        </div>
+        </div>
+        
+        
+        <div class="container">
+        
+        	<div class="col-md-12 col-sm-12 col-xs-12 search">
+            
+            	 <div class="row">
+                <input type="text" id="search" class="InputTypeText" placeholder="Search" />
+           	 	</div>
+            
+            </div>
+        
+        </div>
+        
+        <div class="col-md-12 col-sm-12 col-xs-12">
+        
+        	<p align="center" class="favouritehead">Favourite DJ's</p>
+        
+        </div>
+        
+        
+        
+    </div>  
+    
+     <div class="row djrow">
+            <div class="col-md-12 col-sm-12 col-xs-12 darkbgmain">
+            
+            	<div class="col-md-5 col-sm-5 col-xs-5" style="border:#FFFFFF solid 0px;">
+                
+                	<img src="../img/passportlogin1.jpg" class="djimg" />
+                
+                </div>
+                
+                <div class="col-md-4 col-sm-4 col-xs-4 darkbgsmall">
+                	<p align="center" class="greyText">DJ Name</p>
+                    <p align="center" class="greyText">Artist</p>
+                    <p align="center" class="greyText">Upcoming Events</p>
+                    <p align="center" class="greyText">Few Text</p>
+                    <p align="center" class="greyText">Few More Text</p>
+                </div>
+                
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                	
+                    <button class="djbtn">Place Bid</button><br>
+                    <button class="djbtn">Artist</button><br>
+                    <button class="djbtn">Events</button><br>
+                    <button class="djbtn">Share</button>
+            
+       			 </div>
+                
+                </div>
+            
+                
+                
+            </div>
+            
+            
+            
+             <div class="row djrow">
+            <div class="col-md-12 col-sm-12 col-xs-12 darkbgmain">
+            
+            	<div class="col-md-5 col-sm-5 col-xs-5" style="border:#FFFFFF solid 0px;">
+                
+                	<img src="../img/passportlogin2.jpg" class="djimg" />
+                
+                </div>
+                
+                <div class="col-md-4 col-sm-4 col-xs-4 darkbgsmall">
+                	<p align="center" class="greyText">DJ Name</p>
+                    <p align="center" class="greyText">Artist</p>
+                    <p align="center" class="greyText">Upcoming Events</p>
+                    <p align="center" class="greyText">Few Text</p>
+                    <p align="center" class="greyText">Few More Text</p>
+                </div>
+                
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                	
+                    <button class="djbtn">Place Bid</button><br>
+                    <button class="djbtn">Artist</button><br>
+                    <button class="djbtn">Events</button><br>
+                    <button class="djbtn">Share</button>
+            
+       			 </div>
+                
+                </div>
+            
+                
+                
+            </div>
+            
+            
+            
+            <div class="row">
+                <div class="container">
+                    <div class="bigBtn" class="col-md-12 col-sm-12 col-xs-12" align="center">
+                    
+                        <button class="booktable">BOOK A TABLE</button>
+                    
+                    </div>
+                 </div>
+            </div>
+            
+             <div class="row">
+                <div class="container">
+                    <div class="bigBtn" class="col-md-12 col-sm-12 col-xs-12" align="center">
+                    
+                        <button class="booktable">REQUEST DJ</button>
+                    
+                    </div>
+                 </div>
+            </div>
+    
+            
+        
+        
+            <br><br><br><br><br>
+<!--  Footer  /-->
+    <div id="footer"></div>
+    
+    
+    
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

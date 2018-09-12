@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+   
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/" />
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+    <!-- include footer /-->
+    <script> 
+    $(function(){
+      $("#footer").load("../footer.html"); 
+    });
+	$(function(){
+      $("#nav").load("../nav.html"); 
+    });
+    </script> 
+    
+    
+    <title>Dashbord</title>
+  
+    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet" type="text/css">
+    
+    
+    <style type="text/css">
+        html,body{
+            background-color: #333333;
+        }
+        #navmenu{
+            float: right;
+            top: -30px;
+            color: #ffffff;
+        }
+        #navmenu h5{
+            color: #ffffff;
+        }
+        #redBtns2{
+            margin-top: 5px;
+        }
+        #redBtns2 button{
+            background-color: #dd4f43;
+            border: 0px;
+            border-radius: 3px;
+            color: #ffffff;
+            margin: 3px;
+            width: 80px;
+            padding: 5px;
+        }
+        #ordersId h5{
+            color: #ffffff;
+            text-align: center;
+            font-family: hedfont;
+        }
+        #ordersId{
+            color: #aaaaaa;
+        }
+        .redbtns{
+            background-color: #dd4f43;
+            border-radius: 50px;
+            color: #ffffff;
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin: 8px 3px;
+            font-size: 16px;
+            font-family: hedfont;
+            position: absolute;
+        }
+        .tablehead{
+            background-color: #444444;
+            margin: 0px;
+            padding: 5px;
+            
+        }
+        .tablehead th{
+            border-radius: 10px;
+            
+        }
+		 .redBtns{
+            margin-top: 5px;
+        }
+        .redBtns button{
+            background-color: #dd4f43;
+            border: 0px;
+            border-radius: 3px;
+            color: #ffffff;
+            margin: 3px auto;
+            width: 80px;
+            padding: 5px;
+            transition: .2s;
+        }
+        .redBtns button:hover{
+            background-color: #e77e76;
+            transition: .2s;
+        }
+		.marginbottom{
+			margin-bottom:20px;
+			margin-top:10px;
+			}
+		.transactionBg{
+			width:;
+			height:330px;
+			background-color:rgba(0,0,0,0.2);
+			border:rgba(0,0,0,0.2) solid 0px;
+			border-radius:6px;
+			}
+		.greytext{
+			color:#A0A0A0;
+			margin-top:5px;
+			}
+			
+		.whitetxt{
+			margin-top:10px;
+			color:#FFFFFF;
+			}
+		.lightBg{
+			background-color:rgba(0,0,0,0.2);
+			padding:5px;
+			border:#000000 solid 0px;
+			border-radius:6px;
+			margin-top:5px;
+		}
+			.darkbg{
+				background-color:rgba(0,0,0,0.4);
+				width:100%;
+				padding:10px;
+				margin-bottom:100px;
+				}
+		.manimg{
+			width:50px;
+			height:50px;
+			}
+		.nameBg{
+			background-color:rgba(0,0,0,0.2);
+			color:#B9B9B9;
+			padding:2px;
+			border:#000000 solid 0px;
+			border-radius:4px;
+			
+			}
+		.lady{
+			width:60px;
+			height:60px;
+			border:#000000 solid 0px;
+			border-radius:50%;
+			margin-left:45px;
+			}
+		.ladyname{
+			background-color:rgba(0,0,0,0.2);
+			color:#B9B9B9;
+			padding:5px;
+			padding-left:5px;
+			border:#000000 solid 0px;
+			border-radius:4px;
+			width:70px;
+			margin-left:40px;
+			margin-top:5px;
+			}
+		.gentname{
+			background-color:rgba(0,0,0,0.2);
+			color:#B9B9B9;
+			padding:5px;
+			padding-left:5px;
+			border:#000000 solid 0px;
+			border-radius:4px;
+			width:auto;
+			margin-left:40px;
+			margin-top:5px;
+			margin-right:10px;
+			}
+        
+        
+/*========== Footer ==========*/    
+        
+        #footer{
+            height: 60px;
+            margin: 0px;
+            padding: 0px;
+            background-color: #111111;
+            bottom: 0px;
+            position: fixed;
+            color: #ffffff;
+        }
+        #footer .links{
+            text-align: center;
+            padding-top: 7px;
+            font-size: 11px;
+        }
+        #footer .links img{
+            max-width: 25px;
+            max-height: 25px;
+        }
+        #footer .active{
+            background-color: #664a82;
+            padding-top: 7px;
+            margin: 0px;
+            height: 100%;
+        }
+        
+    </style>    
+    
+    
+</head>
+
+<body id="body">
+
+    <div id="nav" class="col-md-12 col-sm-12 col-xs-12"></div>
+    
+    <div id="app">
+        <div id="main_header" class="col-md-12 col-sm-12 col-xs-12">
+            <a href="#" class="mainbck"><h5><img src="../img/icn/leftarrow.png" style="float:left;margin-top:-3px;width:15px;">Back</h5></a>
+                <div style="margin-top:-30px;text-align:center;">POS Bartender Ordering</div>
+            <span class="glyphicon glyphicon-th-list col-xs-1" id="navmenu"></span>
+        </div>
+        
+        <div id="redBtns2" class="col-md-12 col-sm-12 col-xs-12">
+            <button class="col-md-3 col-sm-3 col-xs-3">Transfer</button>
+            <button class="col-md-3 col-sm-3 col-xs-3">Orders</button>
+            <button class="col-md-3 col-sm-3 col-xs-3">Tip</button>
+            <button class="col-md-3 col-sm-3 col-xs-3">Manager</button>
+        </div>
+        
+        
+        <div id="ordersId" class="col-md-12 col-sm-12 col-xs-12">
+            <div class="redbtns" style="padding:0px 5px;">&#43;</div>
+            <div class="redbtns" style="padding:0px 8px;left:40px;">&#45;</div>
+            <h5>Order Details</h5>
+            
+            <table class="col-md-12 col-sm-12 col-xs-12">
+                <tr class="tablehead">
+                    <th class="col-md-2 col-sm-2 col-xs-2">Qty</th>
+                    <th class="col-md-7 col-sm-7 col-xs-7">Orders</th>
+                    <th class="col-md-3 col-sm-3 col-xs-3">Amount</th>
+                </tr>
+                
+                <tr>
+                    <td class="col-md-2 col-sm-2 col-xs-2">#</td>
+                    <td class="col-md-7 col-sm-7 col-xs-7">Order Information</td>
+                    <td class="col-md-3 col-sm-3 col-xs-3">$117.00</td>
+                </tr>
+            
+            </table>
+            
+            
+        </div>
+        
+
+        <div class="col-md-12 col-sm-12 col-xs-12 search" style="margin-top:150px;">
+            
+            	 <div class="row">
+                <input type="text" id="search" class="InputTypeText" placeholder="Search" />
+           	 	</div>
+            
+            </div>
+            
+            
+            
+            <div class="col-md-12 col-sm-12 col-xs-12 marginbottom">
+            
+            	<div class="col-md-2 col-sm-2 col-xs-2 redBtns">
+                    <button>Drink</button><br>
+                    <button>Beer</button><br>
+                    <button>Vodka</button><br>
+                    <button>Gin</button><br>
+                    <button>Rum</button><br>
+                    <button>Tequila</button><br>
+                    <button>Whiskey</button><br>
+                    <button>Shampian</button><br>
+                    <button>Cordials</button><br>
+                    <button>Bottles</button>
+            
+       	 	</div>
+            
+            <div class="col-md-6 col-sm-6 col-xs-6">
+            
+            	<div class="row">
+            	<img src="../img/lady.jpg" class="lady">
+                <p align="center" class="ladyname">Name</p>
+                </div>
+                
+                <div class="row">
+            	<img src="../img/gent.jpg" class="lady">
+                <p class="gentname">
+                Client Name <br>
+                Order Information<br>
+                Price</p>
+                </div>
+            
+            </div>
+            
+            
+            <div class="col-md-4 col-sm-4 col-xs-4 transactionBg">
+            
+            	<p align="center" class="greytext">Process Transaction</p>
+                <div class="redBtns">
+                    <button>Cash</button><br>
+                    <button>Credit Card</button><br>
+                    <button>iBookit</button><br>
+                    <button>Close Tabs</button>
+            
+       	 	</div>
+            
+            <div class="lightBg">
+            
+            	<p class="whitetxt">List Of Items</p>
+                <p class="greytext">Order Informatio 1</p>
+                <p class="greytext">Order Informatio 2</p>
+                <p class="greytext">Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$500</p>
+                
+            </div>
+            
+            
+            
+            </div>
+            
+            </div>
+            
+            
+            
+            
+            <div class="col-md-12 c0l-sm-12 col-xs-12 darkbg">
+            
+            	<div class="col-md-2 col-sm-2 col-xs-2">
+                	<img src="../img/man.jpg" class="manimg">
+                    <p align="center" class="nameBg">Name</p>
+                </div>
+                
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                	<img src="../img/man.jpg" class="manimg">
+                    <p align="center" class="nameBg">Name</p>
+                </div>
+                
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                	<img src="../img/man.jpg" class="manimg">
+                    <p align="center" class="nameBg">Name</p>
+                </div>
+                
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                	<img src="../img/man.jpg" class="manimg">
+                    <p align="center" class="nameBg">Name</p>
+                </div>
+                
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                	<img src="../img/man.jpg" class="manimg">
+                    <p align="center" class="nameBg">Name</p>
+                </div>
+                
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                	<img src="../img/man.jpg" class="manimg">
+                    <p align="center" class="nameBg">Name</p>
+                </div>
+            
+            </div>
+        
+        
+    </div>  
+    
+    
+<!--  Footer  /-->
+    <div id="footer"></div>
+            
+    
+    
+    
+    
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

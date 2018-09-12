@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+   
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css" />
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+    <!-- include footer /-->
+    <script> 
+    $(function(){
+      $("#footer").load("../footer.html"); 
+    });
+	$(function(){
+      $("#nav").load("../nav.html"); 
+    });
+    </script> 
+    
+    
+    <title>Dashbord</title> 
+    
+    
+    <style type="text/css">
+        html,body{
+            background-color: #333333;
+        }
+        #main_header h5{
+            color: #ffffff;
+        }
+        #navmenu{
+            float: right;
+            top: -30px;
+        }
+        #redBtns{
+            margin-top: 5px;
+        }
+        .redBtns button{
+            background-color: #dd4f43;
+            border: 0px;
+            border-radius: 3px;
+            color: #ffffff;
+            margin: 3px auto;
+            padding: 5px;
+            transition: .2s;
+        }
+		.redBtnsw button{
+		  width: 120px;
+		}
+		.submit1 button{
+			margin-top:10px;
+			width:230px;
+			margin-left: 10px;
+			
+			}
+		.redBtns button:hover{
+            background-color: #e77e76;
+            transition: .2s;
+        }
+
+        #tbl{
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+            margin-top: 20px;
+        }
+        .tbl_head,.tbl_head2{
+            height: 30px;
+            width: 100%;
+            background-color: #664a82;
+            margin: 0px;
+            padding: 0px;
+            border: 1px solid #dddddd;
+        }
+        .tbl_head{
+            border-radius: 20px 20px 0px 0px; 
+            border-bottom: 0px;
+            padding: 8px;
+            font-size: 16px;
+            font-family: hedfont;
+        }
+        .tbl_head2{
+            border-bottom: 0px;
+        }
+        .menus{
+            border: 1px solid #dddddd;
+            border-top: 0px;
+            padding: 5px;
+        }
+        #txtarea{
+            background-color: #111111;
+            min-height: 150px;
+            padding-left: 10px;
+            width: 60%;
+            margin-top: 10px;
+            border-radius: 5px;
+            color: #dddddd;
+            float: right;
+        }
+        
+        
+/*============ Footer ==============*/        
+        #footer{
+            height: 60px;
+            margin: 0px;
+            padding: 0px;
+            background-color: #111111;
+            bottom: 0px;
+            position: fixed;
+            color: #ffffff;
+        }
+        #footer .links{
+            text-align: center;
+            padding-top: 7px;
+            font-size: 11px;
+        }
+        #footer .links img{
+            max-width: 25px;
+            max-height: 25px;
+        }
+        #footer .active{
+            background-color: #664a82;
+            padding-top: 7px;
+            margin: 0px;
+            height: 100%;
+        }
+		/*.guestmenu1 div{
+			color:#FFF;
+			}*/
+		.guestmenu{
+				border: 1px solid black;
+    			background-color: #664a82;
+    			padding: 20px 15px 50px 20px;
+				margin-left:0px;
+				
+			}
+		 .guestmenu div{
+				font-size:14px;
+				color: #c1b0d2;
+            	text-align: center;
+				font-weight:bold;
+				text-align:left;
+			}
+			
+      		.guestmenu1{
+				border: 1px solid black;
+    			background-color: 00000;
+    			padding: 20px 15px 50px 20px;
+				margin-left:0px;
+				
+			} 
+				 .guestmenu1 div{
+				font-size:14px;
+				color: #fffff;
+            	text-align: center;
+				font-weight:bold;
+				text-align:left;
+			}
+    </style>    
+    
+    
+</head>
+
+<body id="body">
+
+    <div id="nav" class="col-md-12 col-sm-12 col-xs-12"></div>
+    
+    <div class="guestmenu">
+     <div class="col-md-3 col-sm-3 col-xs-3">Name</div>
+	 <div class="col-md-2 col-sm-2 col-xs-2">M/F</div>
+     <div class="col-md-3 col-sm-3 col-xs-3">No of Guest</div>
+     <div class="col-md-4 col-sm-4 col-xs-4">Group/ promoter</div>     
+    </div> 
+     
+     <div class="guestmenu1 guestmenu">
+     <div class="col-md-3 col-sm-3 col-xs-3">Customer Name</div>
+	 <div class="col-md-2 col-sm-2 col-xs-2">F</div>
+     <div class="col-md-3 col-sm-3 col-xs-3">3</div>
+     <div class="col-md-4 col-sm-4 col-xs-4">Group</div>     
+    </div>   
+    
+    
+    
+<!--  Footer  /-->
+    <div id="footer"></div>
+    
+    
+    
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

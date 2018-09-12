@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+   
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/" />
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+    <!-- include footer /-->
+    <script> 
+    $(function(){
+      $("#footer").load("../footer.html"); 
+    });
+	$(function(){
+      $("#nav").load("../nav.html"); 
+    });
+    </script> 
+    
+    
+    <title>Dashbord</title> 
+    
+    
+    <style type="text/css">
+        html,body{
+            background-color: #333333;
+        }
+        #main_header h5{
+            color: #ffffff;
+        }
+        #navmenu{
+            float: right;
+            top: -30px;
+        }
+        #redBtns{
+            margin-top: 5px;
+        }
+        .redBtns button{
+            background-color: #dd4f43;
+            border: 0px;
+            border-radius: 3px;
+            color: #ffffff;
+            margin: 3px auto;
+            padding: 5px;
+            transition: .2s;
+        }
+		.redBtnsw button{
+		  width: 120px;
+		}
+		.submit1 button{
+			margin-top:10px;
+			width:230px;
+			margin-left: 10px;
+			
+			}
+		.redBtns button:hover{
+            background-color: #e77e76;
+            transition: .2s;
+        }
+
+        #tbl{
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+            margin-top: 20px;
+        }
+        .tbl_head,.tbl_head2{
+            height: 30px;
+            width: 100%;
+            background-color: #664a82;
+            margin: 0px;
+            padding: 0px;
+            border: 1px solid #dddddd;
+        }
+        .tbl_head{
+            border-radius: 20px 20px 0px 0px; 
+            border-bottom: 0px;
+            padding: 8px;
+            font-size: 16px;
+            font-family: hedfont;
+        }
+        .tbl_head2{
+            border-bottom: 0px;
+        }
+        .menus{
+            border: 1px solid #dddddd;
+            border-top: 0px;
+            padding: 5px;
+        }
+        #txtarea{
+            background-color: #111111;
+            min-height: 150px;
+            padding-left: 10px;
+            width: 60%;
+            margin-top: 10px;
+            border-radius: 5px;
+            color: #dddddd;
+            float: right;
+        }
+        
+        
+/*============ Footer ==============*/        
+        #footer{
+            height: 60px;
+            margin: 0px;
+            padding: 0px;
+            background-color: #111111;
+            bottom: 0px;
+            position: fixed;
+            color: #ffffff;
+        }
+        #footer .links{
+            text-align: center;
+            padding-top: 7px;
+            font-size: 11px;
+        }
+        #footer .links img{
+            max-width: 25px;
+            max-height: 25px;
+        }
+        #footer .active{
+            background-color: #664a82;
+            padding-top: 7px;
+            margin: 0px;
+            height: 100%;
+        }
+        
+    </style>    
+    
+    
+</head>
+
+<body id="body">
+
+    <div id="nav" class="col-md-12 col-sm-12 col-xs-12"></div>
+    
+    <div id="app">
+        <div id="main_header" class="col-md-12 col-sm-12 col-xs-12">
+            <a href="#"><h5><img src="../img/icn/leftarrow.png" style="float:left;margin-top:-3px;width:15px;">Back</h5></a>
+                <div style="margin-top:-30px;text-align:center;">Promoter Login</div>
+            <span class="glyphicon glyphicon-th-list col-xs-1" id="navmenu"></span>
+        </div>
+        
+        
+        
+        <div id="pageName" class="col-md-12 col-sm-12 col-xs-12">
+          <div class="row">
+            <div class="col-xs-4 ItemMenu activeItemMenu">Search</div>
+            <div class="col-xs-8 ItemMenu">Insert Venue Scroller</div>
+          </div>  
+            <div class="row">
+                <div class="col-xs-12 ItemDisplay">
+                <input type="text" id="search" class="InputTypeText" placeholder="type to search" />
+                </div>
+            </div>
+        </div>
+        
+        <!-- Red Buttons /-->
+        <div class="redBtnsw redBtns col-md-4 col-sm-4 col-xs-4">
+            <button>Guest List</button><br>
+            <button>Tabels</button><br>
+            <button>Messege Guest</button><br>
+            <button>Share Events</button><br>
+            <button>Track the Reach</button><br>
+            
+            
+        </div>
+        
+        <div id="txtarea" class="col-md-8col-sm-8col-xs-8">
+            Sample Text Here.  
+        </div>
+        <br>
+        <br>
+		 <div class="submit1 redBtns col-md-4 col-sm-4 col-xs-4">
+            <button>Submit</button><br>
+        </div>
+        
+        
+        <div id="tbl" class="col-md-12 col-sm-12 col-xs-12">
+                <div class="tbl_head">
+                    <div class="col-md-12 col-sm-12 col-xs-12">Current</div>  
+                </div>
+                <div class="tbl_head2">
+                    <div class="menus col-md-4 col-sm-4 col-xs-4">Male</div>
+                    <div class="menus col-md-4 col-sm-4 col-xs-4">Reservation</div>
+                    <div class="menus col-md-4 col-sm-4 col-xs-4">Female</div>
+                </div>
+                
+                
+                
+        </div>
+        
+        
+        
+    </div>  
+    
+    
+    
+    
+<!--  Footer  /-->
+    <div id="footer"></div>
+    
+    
+    
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
