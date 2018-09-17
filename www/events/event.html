@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <!--<link rel="stylesheet" type="text/css" href="../css/" />-->
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style_new.css" media="all" />
+    <link rel="stylesheet" href="../css/adaptive.css" media="all" />
+
+    <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/slick.css"/>
+    <script type="text/javascript" src="../js/slick.js"></script>
+    <!--<script>/* <![CDATA[ */ window.jQuery || document.write('<script src="../js/js/jquery-2.2.0.min.js">\x3C/script>') /* ]]> */</script>-->
+    <script src="../js/js/jquery.mousewheel.min.js"></script>
+    <script src="../js/js/jquery.fCarousel.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="../js/js/scripts_new.js"></script>
+    <!-- include footer /-->
+    <script>
+        $(function(){
+            $("#footer").load("../footer.html");
+        });
+        $(function(){
+            $("#nav").load("../nav.html");
+        });
+    </script>
+
+
+    <title>Dashbord</title>
+
+
+    <style type="text/css">
+        .slick-carousel img {
+            width: 200px;
+        }
+        html,body{
+            background-color: #333333;
+            background-image: url('../img/events/background.jpg');
+            background-repeat: repeat-y;
+        }
+        #main_header h5{
+            color: #ffffff;
+        }
+        #navmenu{
+            float: right;
+            top: -30px;
+        }
+        #redBtns{
+            margin-top: 5px;
+        }
+        #redBtns button{
+            background-color: #dd4f43;
+            border: 0px;
+            border-radius: 3px;
+            color: #ffffff;
+            margin: 3px auto;
+            width: 120px;
+            padding: 5px;
+        }
+        #tbl{
+            color: #ffffff;
+            text-align: center;
+            padding: 0px;
+            margin-top: 20px;
+        }
+        .tbl_head,.tbl_head2{
+            height: 30px;
+            width: 100%;
+            background-color: #664a82;
+            margin: 0px;
+            padding: 0px;
+            border: 1px solid #dddddd;
+        }
+        .tbl_head{
+            border-radius: 20px 20px 0px 0px;
+            border-bottom: 0px;
+            padding: 8px;
+            font-size: 16px;
+            font-family: hedfont;
+        }
+        .tbl_head2{
+            border-bottom: 0px;
+        }
+        .menus{
+            border: 1px solid #dddddd;
+            border-top: 0px;
+            padding: 5px;
+        }
+        #eventhead{
+            padding: 0px;
+        }
+        #eventhead img{
+            padding: 0px;
+        }
+        .greenMsg{
+            width: 30%;
+            height: 100%;
+            background-color: rgba(180, 205, 30, .8);
+            position: absolute;
+            left: 70%;
+            vertical-align: middle;
+            text-align: center;
+            color: #ffffff;
+            font-size: 16px;
+            padding-top: 30px;
+            line-height: 1px;
+        }
+        .bookit{
+            margin-top: 15px;
+            color: #ffffff;
+        }
+        .bookit::after{
+            content: url(../img/icn/go.png);
+            position:absolute;
+            margin-left:5px;
+        }
+        #colordbtns{
+            padding-top: 30px;
+            text-align: center;
+        }
+        .btn{
+            width: 100%;
+            height: 45px;
+            border: 0px;
+            font-family: hedfont;
+            padding: 10px auto;
+            color: #ffffff;
+            margin: 5px auto;
+            text-align: left;
+        }
+        #sec3{
+            margin-bottom: 50px;
+            margin-top: 30px;
+            padding: 0px;
+        }
+        #sec3 .itemName,#sec3 .itemName1{
+            color: #dddddd;
+            width: 100%;
+            position: absolute;
+            bottom: 3px;
+            padding:0px;
+            font-family: hedfont;
+        }
+        #sec3 img{
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+        }
+        #sec3 span{
+            position: absolute;
+            color: #ffffff;
+            left: 5px;
+            bottom: 5px;
+            text-align: center;
+        }
+        .classin{
+            padding: 0px;
+        }
+        /*========== Footer ==========*/
+
+        #footer{
+            height: 60px;
+            margin: 0px;
+            padding: 0px;
+            background-color: #111111;
+            bottom: 0px;
+            position: fixed;
+            color: #ffffff;
+        }
+        #footer .links{
+            text-align: center;
+            padding-top: 7px;
+            font-size: 11px;
+        }
+        #footer .links img{
+            max-width: 25px;
+            max-height: 25px;
+        }
+        #footer .active{
+            background-color: #664a82;
+            padding-top: 7px;
+            margin: 0px;
+            height: 100%;
+        }
+        /*.slick-carousel img{
+            !*width: 75%!important;*!
+        }
+        .slick-center img{
+            width: 90%!important;
+        }*/
+
+        .main {
+            font-family:Arial;
+            width:500px;
+            display:block;
+            margin:0 auto;
+        }
+        h3 {
+            background: #fff;
+            color: #3498db;
+            font-size: 36px;
+            line-height: 100px;
+            margin: 10px;
+            padding: 0%;
+            position: relative;
+            text-align: center;
+        }
+        .action{
+            display:block;
+            margin:100px auto;
+            width:100%;
+            text-align:center;
+        }
+        .action a {
+            display:inline-block;
+            padding:5px 10px;
+            background:#f30;
+            color:#fff;
+            text-decoration:none;
+        }
+        .action a:hover{
+            background:#000;
+        }
+
+    </style>
+
+
+</head>
+
+<body id="body">
+
+<div id="nav" class="col-md-12 col-sm-12 col-xs-12"></div>
+
+<div id="app">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="main_header" class="col-md-12 col-sm-12 col-xs-12">
+                <a href="#" class="mainbck"><h5><img src="../img/icn/leftarrow.png" style="float:left;margin-top:-3px;width:15px;">Back</h5></a>
+                <div style="margin-top:-30px;text-align:center;">Event</div>
+                <span class="glyphicon glyphicon-th-list col-xs-1" id="navmenu"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="eventhead" class="col-sm-12 col-xs-12" >
+                <div id="example-3" class="fcarousel" style="height: 400px" aria-labelledby="example-3-label">
+                    <div class="item-1 pre transit">
+                        <img src="../img/product_img.jpg" style="width: 100%;height: 100%">
+                    </div>
+                    <div class="item-2">
+                        <img src="../img/product_img.jpg" style="width: 100%;height: 100%">
+                    </div>
+                    <div class="item-3 next">
+                        <img src="../img/product_img.jpg" style="width: 100%;height: 100%">
+                    </div>
+                    <div class="item-4">
+                        <img src="../img/product_img.jpg" style="width: 100%;height: 100%">
+                    </div>
+                    <div class="item-5">
+                        <img src="../img/product_img.jpg" style="width: 100%;height: 100%">
+                    </div>
+                    <div class="item-6">
+                        <img src="../img/product_img.jpg" style="width: 100%;height: 100%">
+                    </div>
+                    <div class="item-7">
+                        <img src="../img/product_img.jpg" style="width: 100%;height: 100%">
+                    </div>
+                </div>
+                <!--<div id="example-3" class="fcarousel" aria-labelledby="example-3-label">-->
+                    <!--<div class="item-1 pre">-->
+                        <!--<img src="../img/product_img.jpg" style="width: 100%;height: 100%">-->
+                        <!--<div class="products_details">-->
+                            <!--<p class="title">Event Title</p>-->
+                            <!--<p class="date">Venue name, 7 july</p>-->
+                            <!--<p class="old_price">$210</p>-->
+                            <!--<p class="current_price">$180.00</p>-->
+                            <!--&lt;!&ndash;<p class="products_book">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<button>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;Book it<i class="glyphicon glyphicon-circle-arrow-right"></i>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</button>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-2">-->
+                        <!--<img src="../img/proimg1.jpg" style="width: 100%;height: 100%">-->
+                    <!--</div>-->
+                    <!--<div class="item-3 next">-->
+                        <!--<img src="../img/proimg2.jpg" style="width: 100%;height: 100%">-->
+                    <!--</div>-->
+                    <!--<div class="item-4">-->
+                        <!--<img src="../img/proimg3.jpg" style="width: 100%;height: 100%">-->
+                    <!--</div>-->
+                    <!--<div class="item-5">-->
+                        <!--<img src="../img/proimg3.jpg" style="width: 100%;height: 100%">-->
+                    <!--</div>-->
+                    <!--<div class="item-6">-->
+                        <!--<img src="../img/proimg3.jpg" style="width: 100%;height: 100%">-->
+                    <!--</div>-->
+                    <!--<div class="item-7">-->
+                        <!--<img src="../img/proimg3.jpg" style="width: 100%;height: 100%">-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div  class="col-sm-8 col-xs-8 col-sm-offset-2 col-xs-offset-2" >
+                <button style="width: 75%;height: 60px;position: absolute;margin-top: -40px;background-color: #a10000;border: none;border-radius: 5px;margin-left: 32px;"><b style="color: white;font-size: 25px;">Book it Now!</b></button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+   <!-- <div id="colordbtns" class="col-sm-12 col-xs-12">
+        <button class="btn" onclick="window(location='guestlist.html')" style="background-color:#ec4455;">Guest List</button>
+        <button class="btn" style="background-color:#664b82;">Express Entry</button>
+        <button class="btn" style="background-color:#77824a;">iBookit Bottles</button>
+    </div>
+
+    <div id="sec3" class="col-md-12 col-sm-12 col-xs-12">
+        <div class="classin col-md-6 col-sm-6 col-xs-6">
+            <img src="../img/image3.jpg" id="imgs"><span>Wilgym</span>
+        </div>
+
+        <div class="classin col-md-6 col-sm-6 col-xs-6">
+            <img src="../img/image4.jpg" id="imgs"><span>Tha Oribans</span>
+        </div>
+    </div>-->
+
+
+
+
+</div>
+
+
+
+
+<!--  Footer  /-->
+<div id="footer"></div>
+
+
+
+
+<script type="text/javascript" src="../cordova.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+    app.initialize();
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+        centerMode: true,
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: true,
+        focusOnSelect: true,
+        vertical: true,
+        verticalSwiping:true,
+    });
+
+    $('a[data-slide]').click(function(e) {
+        e.preventDefault();
+        var slideno = $(this).data('slide');
+        $('.slider-nav').slick('slickGoTo', slideno - 1);
+    });
+/*    $('.slick-carousel').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  vertical: true,
+  verticalSwiping:true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    }
+  ]
+})*/;
+</script>
+</body>
+
+</html>
