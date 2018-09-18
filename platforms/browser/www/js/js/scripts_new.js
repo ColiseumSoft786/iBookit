@@ -3,25 +3,25 @@ jQuery(function($){
 // Check mobile
 
     $('#example-3').fCarousel({
-        'centerItem'	:	2,
-        'separation'	:	30,
+        'centerItem'	:	1,
+        'separation'	:	130,
         'orientation'	:	'vertical',
         'distance' 		: 	300,
         // 'mousewheel'	:	true,
         'responsive'	:	{
-            0		:	{ 'separation' : 100, 'mousewheel' : false},
+            0		:	{ 'separation' : 170, 'mousewheel' : false},
             768		:	{ 'mousewheel' : true },
-            1024	:	{ 'separation' : 100 }
+            1024	:	{ 'separation' : 130 }
         },
         // 'autoplay'		:	3000,
-        'onChange'		:	function(carousel){
-
-            $('.next').removeClass('next');
+        'clickedCenter'		:	function(carousel){
+            alert('clicked');
+            /*$('.next').removeClass('next');
             $('.pre').removeClass('pre');
             var pre = carousel.data('prevItem').index() + 1;
             var next = carousel.data('nextItem').index() + 1;
             $('.item-'+pre).addClass('pre transit');
-            $('.item-'+next).addClass('next');
+            $('.item-'+next).addClass('next');*/
 
         },
         'afterChange'	:	function(carousel, centerItem){
